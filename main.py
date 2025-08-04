@@ -4,6 +4,10 @@ import os
 import re
 import base64
 import json
+import stat
+
+# Ensure N_m3u8DL-RE is executable
+os.chmod("N_m3u8DL-RE", os.stat("N_m3u8DL-RE").st_mode | stat.S_IEXEC)
 
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
